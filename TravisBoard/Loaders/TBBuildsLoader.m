@@ -20,6 +20,8 @@
 
 @implementation TBBuildsLoader
 
+#pragma mark - Public Initializers
+
 + (instancetype)loaderWithCoreDataController:(HCDCoreDataStackController *)coreDataController
 {
     return [[self alloc] initWithCoreDataController:coreDataController];
@@ -32,9 +34,10 @@
     return [self initWithCoreDataController:coreDataController requestManager:requestManager];
 }
 
-#pragma mark - Designated Initializer. Powered with Dependency Injection. Keeps incapsulation:)
+#pragma mark - Designated Initializer. Testable constructor.
 
-- (instancetype)initWithCoreDataController:(HCDCoreDataStackController *)coreDataController requestManager:(ZMLRequestManager *)requestManager
+- (instancetype)initWithCoreDataController:(HCDCoreDataStackController *)coreDataController
+                            requestManager:(ZMLRequestManager *)requestManager
 {
     self = [super init];
     if (self) {

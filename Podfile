@@ -10,3 +10,8 @@ pod 'macros_blocks'
 pod 'ABMultiton'
 pod 'HardCoreData'
 pod 'AFNetworking'
+
+target :TravisBoardTests do
+    pod 'Expecta', '~> 0.3'
+    pod 'OCMock'
+end

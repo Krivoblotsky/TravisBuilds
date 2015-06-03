@@ -23,23 +23,29 @@ PODS:
   - EasyMapping (0.14.2):
     - EasyMapping/Core (= 0.14.2)
   - EasyMapping/Core (0.14.2)
+  - Expecta (0.4.2)
   - HardCoreData (0.1.2)
   - macros_blocks (0.0.3):
     - macros_blocks/core (= 0.0.3)
   - macros_blocks/core (0.0.3)
+  - OCMock (3.1.2)
 
 DEPENDENCIES:
   - ABMultiton
   - AFNetworking
   - EasyMapping
+  - Expecta (~> 0.3)
   - HardCoreData
   - macros_blocks
+  - OCMock
 
 SPEC CHECKSUMS:
   ABMultiton: c580cc9ecd6f0869535241368fdcc44c4f5d141c
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   EasyMapping: 9966f9608ab9fdbbf9e6d870badcafbe68198e1c
+  Expecta: 78b4e8b0c8291fa4524d7f74016b6065c2e391ec
   HardCoreData: d5684670b07b26d5e197b3707decc977aaf654cc
   macros_blocks: fae8dc0d72562dfcbe08caaeafcdc857625d343c
+  OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
 
 COCOAPODS: 0.37.2

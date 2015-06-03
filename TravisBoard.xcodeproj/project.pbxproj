@@ -10,7 +10,6 @@
 		A76423781B1CD122009175E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76423771B1CD122009175E5 /* main.m */; };
 		A76423801B1CD122009175E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A764237F1B1CD122009175E5 /* Images.xcassets */; };
 		A76423831B1CD122009175E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76423811B1CD122009175E5 /* Main.storyboard */; };
-		A764238F1B1CD123009175E5 /* TravisBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A764238E1B1CD123009175E5 /* TravisBoardTests.m */; };
 		A764239B1B1CD2AB009175E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A764239A1B1CD2AB009175E5 /* AppDelegate.m */; };
 		A764239F1B1CD2DD009175E5 /* TBBuildsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764239E1B1CD2DD009175E5 /* TBBuildsListViewController.m */; };
 		A76423A31B1CDAF6009175E5 /* TBBuildsListRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = A76423A21B1CDAF6009175E5 /* TBBuildsListRowView.m */; };
@@ -28,6 +27,10 @@
 		A7F9B36F1B1DAD6D00B55DD0 /* TBBackgroundColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F9B36E1B1DAD6D00B55DD0 /* TBBackgroundColorView.m */; };
 		A7F9B3761B1DBB1F00B55DD0 /* TBBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F9B3751B1DBB1F00B55DD0 /* TBBuild.m */; };
 		A7F9B37E1B1DC0E800B55DD0 /* TBTravisBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7F9B37C1B1DC0E800B55DD0 /* TBTravisBoard.xcdatamodeld */; };
+		A7FF83931B1ED98000F3B73B /* TBBaseTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FF83921B1ED98000F3B73B /* TBBaseTestCase.m */; };
+		A7FF83971B1ED99900F3B73B /* TBRequestManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FF83941B1ED99900F3B73B /* TBRequestManagerTests.m */; };
+		A7FF83981B1ED99900F3B73B /* ZMLTestableRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FF83951B1ED99900F3B73B /* ZMLTestableRequestManager.m */; };
+		B161B272E745231DF8E2888D /* libPods-TravisBoardTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86155CA1C2DD6E92BC6B8E72 /* libPods-TravisBoardTests.a */; };
 		E2570CBDF267EE0321C42A07 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD1DC949354B4CB8F70D896 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +47,9 @@
 /* Begin PBXFileReference section */
 		2DD1DC949354B4CB8F70D896 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3864D48CC08D48CFE296B986 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		65F1888DFC30008CE428A8E3 /* Pods-TravisBoardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravisBoardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravisBoardTests/Pods-TravisBoardTests.release.xcconfig"; sourceTree = "<group>"; };
 		7789F9710D6A77B54968FA66 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		86155CA1C2DD6E92BC6B8E72 /* libPods-TravisBoardTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravisBoardTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A764236F1B1CD122009175E5 /* TravisBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravisBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76423731B1CD122009175E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A76423771B1CD122009175E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,7 +57,6 @@
 		A76423821B1CD122009175E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A76423881B1CD123009175E5 /* TravisBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravisBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A764238D1B1CD123009175E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A764238E1B1CD123009175E5 /* TravisBoardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TravisBoardTests.m; sourceTree = "<group>"; };
 		A76423991B1CD2AB009175E5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A764239A1B1CD2AB009175E5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A764239D1B1CD2DD009175E5 /* TBBuildsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBuildsListViewController.h; sourceTree = "<group>"; };
@@ -89,6 +93,12 @@
 		A7F9B3741B1DBB1F00B55DD0 /* TBBuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBuild.h; sourceTree = "<group>"; };
 		A7F9B3751B1DBB1F00B55DD0 /* TBBuild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBuild.m; sourceTree = "<group>"; };
 		A7F9B37D1B1DC0E800B55DD0 /* TBTravisBoard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TBTravisBoard.xcdatamodel; sourceTree = "<group>"; };
+		A7FF83911B1ED98000F3B73B /* TBBaseTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBaseTestCase.h; sourceTree = "<group>"; };
+		A7FF83921B1ED98000F3B73B /* TBBaseTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBaseTestCase.m; sourceTree = "<group>"; };
+		A7FF83941B1ED99900F3B73B /* TBRequestManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBRequestManagerTests.m; sourceTree = "<group>"; };
+		A7FF83951B1ED99900F3B73B /* ZMLTestableRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMLTestableRequestManager.m; sourceTree = "<group>"; };
+		A7FF83961B1ED99900F3B73B /* ZMLTestableRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMLTestableRequestManager.h; sourceTree = "<group>"; };
+		AAFBEC5F83E741B9BCA1A2BA /* Pods-TravisBoardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravisBoardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravisBoardTests/Pods-TravisBoardTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B161B272E745231DF8E2888D /* libPods-TravisBoardTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				2DD1DC949354B4CB8F70D896 /* libPods.a */,
+				86155CA1C2DD6E92BC6B8E72 /* libPods-TravisBoardTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,6 +135,8 @@
 			children = (
 				7789F9710D6A77B54968FA66 /* Pods.debug.xcconfig */,
 				3864D48CC08D48CFE296B986 /* Pods.release.xcconfig */,
+				AAFBEC5F83E741B9BCA1A2BA /* Pods-TravisBoardTests.debug.xcconfig */,
+				65F1888DFC30008CE428A8E3 /* Pods-TravisBoardTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -175,7 +189,9 @@
 		A764238B1B1CD123009175E5 /* TravisBoardTests */ = {
 			isa = PBXGroup;
 			children = (
-				A764238E1B1CD123009175E5 /* TravisBoardTests.m */,
+				A7FF83991B1ED99D00F3B73B /* RequestManagerTests */,
+				A7FF83911B1ED98000F3B73B /* TBBaseTestCase.h */,
+				A7FF83921B1ED98000F3B73B /* TBBaseTestCase.m */,
 				A764238C1B1CD123009175E5 /* Supporting Files */,
 			);
 			path = TravisBoardTests;
@@ -363,6 +379,16 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		A7FF83991B1ED99D00F3B73B /* RequestManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7FF83941B1ED99900F3B73B /* TBRequestManagerTests.m */,
+				A7FF83951B1ED99900F3B73B /* ZMLTestableRequestManager.m */,
+				A7FF83961B1ED99900F3B73B /* ZMLTestableRequestManager.h */,
+			);
+			name = RequestManagerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -389,9 +415,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A76423951B1CD123009175E5 /* Build configuration list for PBXNativeTarget "TravisBoardTests" */;
 			buildPhases = (
+				95492EE2D4B7206C318BA15E /* Check Pods Manifest.lock */,
 				A76423841B1CD123009175E5 /* Sources */,
 				A76423851B1CD123009175E5 /* Frameworks */,
 				A76423861B1CD123009175E5 /* Resources */,
+				F17E76C09DD9A1BD281B9E7F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -491,6 +519,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		95492EE2D4B7206C318BA15E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F17E76C09DD9A1BD281B9E7F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravisBoardTests/Pods-TravisBoardTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -523,7 +581,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A764238F1B1CD123009175E5 /* TravisBoardTests.m in Sources */,
+				A7FF83931B1ED98000F3B73B /* TBBaseTestCase.m in Sources */,
+				A7FF83981B1ED99900F3B73B /* ZMLTestableRequestManager.m in Sources */,
+				A7FF83971B1ED99900F3B73B /* TBRequestManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +715,7 @@
 		};
 		A76423961B1CD123009175E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAFBEC5F83E741B9BCA1A2BA /* Pods-TravisBoardTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -675,6 +736,7 @@
 		};
 		A76423971B1CD123009175E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65F1888DFC30008CE428A8E3 /* Pods-TravisBoardTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;

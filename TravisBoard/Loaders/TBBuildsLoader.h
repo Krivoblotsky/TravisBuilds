@@ -36,3 +36,10 @@
 - (void)loadBuilds;
 
 @end
+
+@interface TBBuildsLoader (Unavailable)
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+@end

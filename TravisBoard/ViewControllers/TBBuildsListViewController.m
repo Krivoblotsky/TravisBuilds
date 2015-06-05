@@ -11,7 +11,7 @@
 #import <HardCoreData/HCDCoreDataStackController.h>
 #import "TBBuildsLoader.h"
 
-@interface TBBuildsListViewController ()
+@interface TBBuildsListViewController () <NSTableViewDataSource, NSTableViewDelegate>
 
 /* UI */
 @property (nonatomic, weak) IBOutlet NSTableView *tableView;
@@ -58,7 +58,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
+    
     [self _loadBuilds];
 }
 

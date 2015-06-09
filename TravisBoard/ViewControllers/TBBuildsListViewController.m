@@ -73,7 +73,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self _loadBuilds];
+    
+    /* Download the travis builds */
+    [self _downloadBuilds];
 }
 
 #pragma mark - NSTableViewDelegate
@@ -93,9 +95,17 @@
     return rowView;
 }
 
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification
+{
+    NSInteger selectedRow = [self.tableView selectedRow];
+    if (selectedRow != -1) {
+        [self.tableView deselectRow:[self.tableView selectedRow]];
+    }
+}
+
 #pragma mark - Private
 
-- (void)_loadBuilds
+- (void)_downloadBuilds
 {
     [self.buildsLoader loadBuilds];
 }

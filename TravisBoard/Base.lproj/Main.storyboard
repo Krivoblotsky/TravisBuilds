@@ -199,7 +199,7 @@
                                                                         <constraint firstAttribute="height" constant="48" id="BbZ-wh-zP5"/>
                                                                         <constraint firstAttribute="width" constant="48" id="Lvg-Ua-gWu"/>
                                                                     </constraints>
-                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="rounded_corners" id="GGd-JC-57f"/>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="GGd-JC-57f"/>
                                                                 </imageView>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RQV-9e-cZm">
                                                                     <rect key="frame" x="336" y="69" width="101" height="17"/>
@@ -323,7 +323,4 @@
             <point key="canvasLocation" x="75" y="661"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="rounded_corners" width="240" height="240"/>
-    </resources>
 </document>

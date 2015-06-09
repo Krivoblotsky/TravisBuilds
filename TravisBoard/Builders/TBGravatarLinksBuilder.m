@@ -22,7 +22,7 @@ static NSString * const TBGravatarLinksBuilderHostURL = @"http://www.gravatar.co
     }
     
     NSString *hash = [self preparedHash:email];
-    NSString *composedString = [TBGravatarLinksBuilderHostURL stringByAppendingString:hash];
+    NSString *composedString = [[TBGravatarLinksBuilderHostURL stringByAppendingString:hash] stringByAppendingString:@"?s=200"];
     return [NSURL URLWithString:composedString];
 }
 

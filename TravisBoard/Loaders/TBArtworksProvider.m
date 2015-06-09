@@ -60,27 +60,65 @@
 
 - (void)provideArtworkForURL:(NSURL *)url withCompletion:(void (^)(NSImage *artwork, NSError *error))completion
 {
-    NSString *lastPathComponent = url.lastPathComponent;
-    NSURL *localURL = [self.diskCacheController.imagesCacheFolder URLByAppendingPathComponent:lastPathComponent];
-    
-    /* Query memory cache */
-    NSImage *cachedImage = [self.memoryCacheController objectForKey:lastPathComponent];
-    if (cachedImage) {
-        completion(cachedImage, nil);
+    /* Check if memory cache exists */
+    if ([self _queryMemoryCacheForURL:url withCompletion:completion]) {
         return;
     }
     
+    /* Check if disk cache exists */
+    if ([self _queryDiskCacheForURL:url withCompletion:completion]) {
+        return;
+    }
     
+    /* Query network */
+    [self _queryNetworkForURL:url withCompletion:completion];
+}
+
+#pragma mark - Private
+
+- (BOOL)_queryMemoryCacheForURL:(NSURL *)url withCompletion:(void (^)(NSImage *artwork, NSError *error))completion
+{
+    /* Query memory cache */
+    NSImage *cachedImage = [self.memoryCacheController objectForKey:url.lastPathComponent];
+    if (cachedImage) {
+        completion(cachedImage, nil);
+    }
+    return cachedImage != nil;
+}
+
+- (BOOL)_queryDiskCacheForURL:(NSURL *)url withCompletion:(void (^)(NSImage *artwork, NSError *error))completion
+{
+    NSString *lastPathComponent = url.lastPathComponent;
+    NSURL *localURL = [self.diskCacheController.imagesCacheFolder URLByAppendingPathComponent:lastPathComponent];
+    NSImage *cachedImage = [[NSImage alloc] initWithContentsOfURL:localURL];
     
+    if (cachedImage) {
+
+        /* Cache to memory */
+        [self.memoryCacheController setObject:cachedImage forKey:lastPathComponent];
+        
+        /* Notify the completion */
+        completion(cachedImage, nil);
+    }
+    return cachedImage != nil;
+}
+
+- (void)_queryNetworkForURL:(NSURL *)url withCompletion:(void (^)(NSImage *artwork, NSError *error))completion
+{
+    /* Run network request */
+    NSURL *localURL = [self.diskCacheController.imagesCacheFolder URLByAppendingPathComponent:url.lastPathComponent];
     [self.contentDownloader downloadItemAtURL:url localURL:localURL completion:^(NSURL *remoteURL, NSURL *localURL, NSError *error) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
+            
             /* Create image */
             NSImage *image = [[NSImage alloc] initWithContentsOfFile:localURL.path];
             
             /* Add to cache */
-            [self.memoryCacheController setObject:image forKey:localURL.lastPathComponent];
-            
+            if (image) {
+                [self.memoryCacheController setObject:image forKey:localURL.lastPathComponent];
+            }
+
             /* Notify the completion */
             completion(image, error);
         });

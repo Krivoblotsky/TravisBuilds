@@ -285,7 +285,6 @@
                                             </tableColumns>
                                             <connections>
                                                 <binding destination="nwz-os-DJX" name="content" keyPath="arrangedObjects" id="etu-Ib-sFX"/>
-                                                <outlet property="dataSource" destination="tRc-FO-wDZ" id="hqd-HB-oHp"/>
                                                 <outlet property="delegate" destination="tRc-FO-wDZ" id="QxF-zp-Fd3"/>
                                             </connections>
                                         </tableView>
@@ -315,13 +314,12 @@
                     </connections>
                 </viewController>
                 <customObject id="lnE-o9-Avk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController mode="entity" entityName="TBBuild" automaticallyPreparesContent="YES" automaticallyRearrangesObjects="YES" id="nwz-os-DJX">
+                <arrayController mode="entity" entityName="TBBuild" automaticallyPreparesContent="YES" preservesSelection="NO" selectsInsertedObjects="NO" automaticallyRearrangesObjects="YES" id="nwz-os-DJX">
                     <connections>
                         <binding destination="tRc-FO-wDZ" name="managedObjectContext" keyPath="self.coreDataController.stack.mainManagedObjectContext" id="DaS-v7-ITK"/>
                         <binding destination="tRc-FO-wDZ" name="sortDescriptors" keyPath="self.sortDescriptors" id="MfK-nU-PSy"/>
                     </connections>
                 </arrayController>
-                <customObject id="lpe-Ka-gjJ" customClass="NSSortDescriptor"/>
             </objects>
             <point key="canvasLocation" x="75" y="661"/>
         </scene>

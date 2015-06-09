@@ -141,9 +141,9 @@
                     <window key="window" title="Active Builds" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="609" y="393" width="480" height="270"/>
+                        <rect key="contentRect" x="609" y="393" width="320" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="480" height="270"/>
+                        <value key="minSize" type="size" width="320" height="270"/>
                     </window>
                     <connections>
                         <segue destination="tRc-FO-wDZ" kind="relationship" relationship="window.shadowedContentViewController" id="SSA-hH-DfW"/>
@@ -194,7 +194,7 @@
                                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="90Z-P6-wTi" customClass="TBBackgroundColorView">
                                                                     <rect key="frame" x="0.0" y="0.0" width="445" height="96"/>
                                                                 </customView>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z3S-mM-l4g">
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z3S-mM-l4g" customClass="TBRoundedImageView">
                                                                     <rect key="frame" x="16" y="24" width="48" height="48"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="48" id="BbZ-wh-zP5"/>
@@ -209,8 +209,8 @@
                                                                         <constraint firstAttribute="width" constant="97" id="d69-3d-BgD"/>
                                                                     </constraints>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="#34" id="K0M-xD-grO">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="font" size="13" name="HelveticaNeue-Light"/>
+                                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
@@ -218,12 +218,12 @@
                                                                     </connections>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0BP-zb-2nr">
-                                                                    <rect key="frame" x="84" y="61" width="298" height="17"/>
+                                                                    <rect key="frame" x="82" y="61" width="298" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="17" id="p5O-3O-WX2"/>
                                                                     </constraints>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="Label" drawsBackground="YES" id="Fwz-VF-iDA">
-                                                                        <font key="font" metaFont="system"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="Label" id="Fwz-VF-iDA">
+                                                                        <font key="font" size="13" name="HelveticaNeue-Light"/>
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                                                     </textFieldCell>
@@ -237,7 +237,7 @@
                                                                         <constraint firstAttribute="height" constant="17" id="ly5-en-qSY"/>
                                                                     </constraints>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="lQ7-Uy-X3l">
-                                                                        <font key="font" metaFont="system"/>
+                                                                        <font key="font" size="13" name="HelveticaNeue-Light"/>
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
@@ -248,7 +248,7 @@
                                                                         <constraint firstAttribute="height" constant="17" id="RLk-h6-HLZ"/>
                                                                     </constraints>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="GaE-II-WJg">
-                                                                        <font key="font" metaFont="system"/>
+                                                                        <font key="font" size="13" name="HelveticaNeue-Light"/>
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
@@ -272,7 +272,7 @@
                                                                 <constraint firstItem="90Z-P6-wTi" firstAttribute="leading" secondItem="tQl-8c-b92" secondAttribute="leading" id="ddQ-Dg-oeL"/>
                                                                 <constraint firstAttribute="trailing" secondItem="5Iu-wW-8nA" secondAttribute="trailing" constant="63" id="ezJ-C1-r9Y"/>
                                                                 <constraint firstItem="0BP-zb-2nr" firstAttribute="top" secondItem="tQl-8c-b92" secondAttribute="top" constant="18" id="fwM-Ty-vGx"/>
-                                                                <constraint firstAttribute="trailing" secondItem="0BP-zb-2nr" secondAttribute="trailing" constant="63" id="oAV-EY-FSb"/>
+                                                                <constraint firstAttribute="trailing" secondItem="0BP-zb-2nr" secondAttribute="trailing" constant="67" id="oAV-EY-FSb"/>
                                                                 <constraint firstAttribute="trailing" secondItem="90Z-P6-wTi" secondAttribute="trailing" id="s3R-z9-UPp"/>
                                                                 <constraint firstAttribute="bottom" secondItem="90Z-P6-wTi" secondAttribute="bottom" id="tOY-jv-MqW"/>
                                                             </constraints>

@@ -81,9 +81,9 @@
     [self.artworksProvider provideArtworkForURL:gravatarURL withCompletion:^(NSImage *artwork, NSError *error) {
         rowView.contributorImageView.image = artwork;
         
-        [rowView setWantsLayer:YES];
-        rowView.contributorImageView.layer.cornerRadius = 24.0f;
-        rowView.contributorImageView.layer.masksToBounds = YES;
+//        [rowView setWantsLayer:YES];
+//        rowView.contributorImageView.layer.cornerRadius = 24.0f;
+//        rowView.contributorImageView.layer.masksToBounds = YES;
     }];
     
     return rowView;

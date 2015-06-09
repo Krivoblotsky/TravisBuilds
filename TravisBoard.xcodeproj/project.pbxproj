@@ -14,6 +14,7 @@
 		A737760D1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A737760C1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m */; };
 		A73776101B270F3600E94AEF /* TBArtworksProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = A737760F1B270F3600E94AEF /* TBArtworksProvider.m */; };
 		A73776121B27141000E94AEF /* TBArtworksProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A73776111B27141000E94AEF /* TBArtworksProviderTests.m */; };
+		A73776161B272FD300E94AEF /* TBBuildsArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73776151B272FD300E94AEF /* TBBuildsArrayController.m */; };
 		A76423781B1CD122009175E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76423771B1CD122009175E5 /* main.m */; };
 		A76423801B1CD122009175E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A764237F1B1CD122009175E5 /* Images.xcassets */; };
 		A76423831B1CD122009175E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76423811B1CD122009175E5 /* Main.storyboard */; };
@@ -68,6 +69,8 @@
 		A737760E1B270F3600E94AEF /* TBArtworksProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBArtworksProvider.h; sourceTree = "<group>"; };
 		A737760F1B270F3600E94AEF /* TBArtworksProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBArtworksProvider.m; sourceTree = "<group>"; };
 		A73776111B27141000E94AEF /* TBArtworksProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBArtworksProviderTests.m; sourceTree = "<group>"; };
+		A73776141B272FD300E94AEF /* TBBuildsArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBuildsArrayController.h; sourceTree = "<group>"; };
+		A73776151B272FD300E94AEF /* TBBuildsArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBuildsArrayController.m; sourceTree = "<group>"; };
 		A764236F1B1CD122009175E5 /* TravisBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravisBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76423731B1CD122009175E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A76423771B1CD122009175E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -177,6 +180,15 @@
 			path = Builders;
 			sourceTree = "<group>";
 		};
+		A73776131B272FC000E94AEF /* ArrayControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A73776141B272FD300E94AEF /* TBBuildsArrayController.h */,
+				A73776151B272FD300E94AEF /* TBBuildsArrayController.m */,
+			);
+			path = ArrayControllers;
+			sourceTree = "<group>";
+		};
 		A76423661B1CD122009175E5 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +221,7 @@
 				A73776041B25F98800E94AEF /* Managers */,
 				A76423A01B1CD3C5009175E5 /* Views */,
 				A764239C1B1CD2B1009175E5 /* ViewControllers */,
+				A73776131B272FC000E94AEF /* ArrayControllers */,
 				A76423721B1CD122009175E5 /* Supporting Files */,
 			);
 			path = TravisBoard;
@@ -618,6 +631,7 @@
 				A7A7E1601B1DF9BA00CD0029 /* ZMLAPIConfiguration.m in Sources */,
 				A764239B1B1CD2AB009175E5 /* AppDelegate.m in Sources */,
 				A7A7E1461B1DE78200CD0029 /* ZMLDataTransformer.m in Sources */,
+				A73776161B272FD300E94AEF /* TBBuildsArrayController.m in Sources */,
 				A7F9B36C1B1DABF800B55DD0 /* TBHexToColorTransformer.m in Sources */,
 				A764239F1B1CD2DD009175E5 /* TBBuildsListViewController.m in Sources */,
 				A7A7E16B1B1DFBA100CD0029 /* ZMLBaseJSONSerializer.m in Sources */,

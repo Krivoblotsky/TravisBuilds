@@ -20,9 +20,9 @@
 @property (nonatomic, weak) IBOutlet NSTableView *tableView;
 
 /* Data */
-@property (nonatomic, strong) NSArray *sortDescriptors;
 @property (nonatomic, strong) IBOutlet NSArrayController *buildsArrayController;
 
+/* Dependencies */
 @property (nonatomic, strong) HCDCoreDataStackController *coreDataController;
 @property (nonatomic, strong) TBBuildsLoader *buildsLoader;
 @property (nonatomic, strong) TBArtworksProvider *artworksProvider;
@@ -30,16 +30,6 @@
 @end
 
 @implementation TBBuildsListViewController
-
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self) {
-        /* NSArrayController binding */
-        _sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"buildNumber" ascending:NO]];
-    }
-    return self;
-}
 
 #pragma mark - Lazy Accessors
 
@@ -90,6 +80,10 @@
     NSURL *gravatarURL = [TBGravatarLinksBuilder gravatarUserImageURLWithEmail:build.email];
     [self.artworksProvider provideArtworkForURL:gravatarURL withCompletion:^(NSImage *artwork, NSError *error) {
         rowView.contributorImageView.image = artwork;
+        
+        [rowView setWantsLayer:YES];
+        rowView.contributorImageView.layer.cornerRadius = 24.0f;
+        rowView.contributorImageView.layer.masksToBounds = YES;
     }];
     
     return rowView;
@@ -99,6 +93,10 @@
 {
     NSInteger selectedRow = [self.tableView selectedRow];
     if (selectedRow != -1) {
+        
+        NSURL *externalURL = [NSURL URLWithString:@"http://google.com"];
+        [[NSWorkspace sharedWorkspace] openURL:externalURL];
+        
         [self.tableView deselectRow:[self.tableView selectedRow]];
     }
 }

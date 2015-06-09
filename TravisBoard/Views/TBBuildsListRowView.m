@@ -7,14 +7,8 @@
 //
 
 #import "TBBuildsListRowView.h"
-#import "TBHexToColorTransformer.h"
-#import "TBBackgroundColorView.h"
 
 @interface TBBuildsListRowView ()
-
-@property (weak, nonatomic) IBOutlet NSTextField *buildColorLabel;
-@property (weak, nonatomic) IBOutlet TBBackgroundColorView *backgroundColorView;
-@property (weak, nonatomic) IBOutlet NSImageView *contributorImageView;
 
 @end
 

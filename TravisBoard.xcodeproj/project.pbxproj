@@ -12,6 +12,8 @@
 		A73776071B25F9A500E94AEF /* TBLocalFilesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A73776061B25F9A500E94AEF /* TBLocalFilesManager.m */; };
 		A737760B1B2709DC00E94AEF /* TBGravatarLinksBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A737760A1B2709DC00E94AEF /* TBGravatarLinksBuilder.m */; };
 		A737760D1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A737760C1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m */; };
+		A73776101B270F3600E94AEF /* TBArtworksProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = A737760F1B270F3600E94AEF /* TBArtworksProvider.m */; };
+		A73776121B27141000E94AEF /* TBArtworksProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A73776111B27141000E94AEF /* TBArtworksProviderTests.m */; };
 		A76423781B1CD122009175E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76423771B1CD122009175E5 /* main.m */; };
 		A76423801B1CD122009175E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A764237F1B1CD122009175E5 /* Images.xcassets */; };
 		A76423831B1CD122009175E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76423811B1CD122009175E5 /* Main.storyboard */; };
@@ -63,6 +65,9 @@
 		A73776091B2709DC00E94AEF /* TBGravatarLinksBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBGravatarLinksBuilder.h; sourceTree = "<group>"; };
 		A737760A1B2709DC00E94AEF /* TBGravatarLinksBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBGravatarLinksBuilder.m; sourceTree = "<group>"; };
 		A737760C1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBGravatarLinksBuilderTests.m; sourceTree = "<group>"; };
+		A737760E1B270F3600E94AEF /* TBArtworksProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBArtworksProvider.h; sourceTree = "<group>"; };
+		A737760F1B270F3600E94AEF /* TBArtworksProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBArtworksProvider.m; sourceTree = "<group>"; };
+		A73776111B27141000E94AEF /* TBArtworksProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBArtworksProviderTests.m; sourceTree = "<group>"; };
 		A764236F1B1CD122009175E5 /* TravisBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravisBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76423731B1CD122009175E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A76423771B1CD122009175E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -227,6 +232,7 @@
 				A7FF83921B1ED98000F3B73B /* TBBaseTestCase.m */,
 				A72FE5841B1EDCCA0079011D /* TBBuildsLoaderTests.m */,
 				A737760C1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m */,
+				A73776111B27141000E94AEF /* TBArtworksProviderTests.m */,
 				A764238C1B1CD123009175E5 /* Supporting Files */,
 			);
 			path = TravisBoardTests;
@@ -278,6 +284,8 @@
 				A7A7E13E1B1DE0AE00CD0029 /* TBBuildsLoader.m */,
 				A73775B31B256F6100E94AEF /* TBContentDownloader.h */,
 				A73775B41B256F6100E94AEF /* TBContentDownloader.m */,
+				A737760E1B270F3600E94AEF /* TBArtworksProvider.h */,
+				A737760F1B270F3600E94AEF /* TBArtworksProvider.m */,
 			);
 			path = Loaders;
 			sourceTree = "<group>";
@@ -602,6 +610,7 @@
 				A7A7E1571B1DF99500CD0029 /* ZMLRequestAttachment+Additions.m in Sources */,
 				A7A7E1581B1DF99500CD0029 /* ZMLRequestAttachment.m in Sources */,
 				A73776071B25F9A500E94AEF /* TBLocalFilesManager.m in Sources */,
+				A73776101B270F3600E94AEF /* TBArtworksProvider.m in Sources */,
 				A7A7E1691B1DFBA100CD0029 /* ZMLBaseRequestSerializer.m in Sources */,
 				A73775B51B256F6100E94AEF /* TBContentDownloader.m in Sources */,
 				A7F9B3761B1DBB1F00B55DD0 /* TBBuild.m in Sources */,
@@ -624,6 +633,7 @@
 				A7FF83931B1ED98000F3B73B /* TBBaseTestCase.m in Sources */,
 				A7FF83981B1ED99900F3B73B /* ZMLTestableRequestManager.m in Sources */,
 				A7FF83971B1ED99900F3B73B /* TBRequestManagerTests.m in Sources */,
+				A73776121B27141000E94AEF /* TBArtworksProviderTests.m in Sources */,
 				A72FE5851B1EDCCA0079011D /* TBBuildsLoaderTests.m in Sources */,
 				A737760D1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m in Sources */,
 			);

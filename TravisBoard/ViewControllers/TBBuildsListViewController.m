@@ -12,6 +12,7 @@
 #import "TBBuildsLoader.h"
 #import "TBBuild.h"
 #import "TBGravatarLinksBuilder.h"
+#import "TBArtworksProvider.h"
 
 @interface TBBuildsListViewController () <NSTableViewDelegate>
 
@@ -19,10 +20,12 @@
 @property (nonatomic, weak) IBOutlet NSTableView *tableView;
 
 /* Data */
+@property (nonatomic, strong) NSArray *sortDescriptors;
 @property (nonatomic, strong) IBOutlet NSArrayController *buildsArrayController;
+
 @property (nonatomic, strong) HCDCoreDataStackController *coreDataController;
 @property (nonatomic, strong) TBBuildsLoader *buildsLoader;
-@property (nonatomic, strong) NSArray *sortDescriptors;
+@property (nonatomic, strong) TBArtworksProvider *artworksProvider;
 
 @end
 
@@ -32,6 +35,7 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
+        /* NSArrayController binding */
         _sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"buildNumber" ascending:NO]];
     }
     return self;
@@ -56,6 +60,14 @@
     return _buildsLoader;
 }
 
+- (TBArtworksProvider *)artworksProvider
+{
+    if (!_artworksProvider) {
+        _artworksProvider = [TBArtworksProvider defaultProvider];
+    }
+    return _artworksProvider;
+}
+
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad
@@ -68,10 +80,15 @@
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
+    /* Grab the view from the table */
     TBBuildsListRowView *rowView = [tableView makeViewWithIdentifier:[tableColumn identifier] owner:[tableView delegate]];
     TBBuild *build = [self.buildsArrayController arrangedObjects][row];
     
-    NSLog(@"%@", [TBGravatarLinksBuilder gravatarUserImageURLWithEmail:build.email]);
+    /* Setup avatar to the row */
+    NSURL *gravatarURL = [TBGravatarLinksBuilder gravatarUserImageURLWithEmail:build.email];
+    [self.artworksProvider provideArtworkForURL:gravatarURL withCompletion:^(NSImage *artwork, NSError *error) {
+        rowView.contributorImageView.image = artwork;
+    }];
     
     return rowView;
 }

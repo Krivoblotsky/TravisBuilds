@@ -45,16 +45,16 @@
 
 #pragma mark - Public
 
-- (void)downloadItemAtURL:(NSURL *)remoteURL localURL:(NSURL *)localURL
+- (void)downloadItemAtURL:(NSURL *)remoteURL localURL:(NSURL *)localURL completion:(TBContentDownloaderCompletionBlock)completion;
 {
     NSParameterAssert(remoteURL);
     NSParameterAssert(localURL);
     
     NSURLRequest *request = [NSURLRequest requestWithURL:remoteURL];
-    [self downloadItemWithRequest:request localURL:localURL];
+    [self downloadItemWithRequest:request localURL:localURL completion:completion];
 }
 
-- (void)downloadItemWithRequest:(NSURLRequest *)request localURL:(NSURL *)localURL
+- (void)downloadItemWithRequest:(NSURLRequest *)request localURL:(NSURL *)localURL completion:(TBContentDownloaderCompletionBlock)completion;
 {
     NSParameterAssert(request);
     NSParameterAssert(localURL);
@@ -67,13 +67,19 @@
     {    
         if (error != nil) {
             
-            /* Notify error here */
+            /* Notify delegate error here */
             [self _notifyError:error withURL:localURL];
+
+            /* Notify in completion */
+            if (completion) completion(nil, request.URL, error);
         } else {
             
             /* Notify sucess here */
             [self _moveDownloadedContent:location toURL:localURL];
             [self _notifySuccessWithURL:request.URL localURL:localURL];
+            
+            /* Notify in completion */
+            if (completion) completion(request.URL, localURL, nil);
         }
     }];
  

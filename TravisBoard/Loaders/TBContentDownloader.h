@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^TBContentDownloaderCompletionBlock)(NSURL *remoteURL, NSURL *localURL, NSError *error);
+
 @protocol TBContentDownloaderDelegate;
 @interface TBContentDownloader : NSObject
 
@@ -38,7 +40,7 @@
  *  @param url      NSURL remoteURL
  *  @param localURL NSURL localURL
  */
-- (void)downloadItemAtURL:(NSURL *)remoteURL localURL:(NSURL *)localURL;
+- (void)downloadItemAtURL:(NSURL *)remoteURL localURL:(NSURL *)localURL completion:(TBContentDownloaderCompletionBlock)completion;
 
 /**
  *  Downloads item with given request and places it into local url
@@ -46,7 +48,7 @@
  *  @param url      NSURLRequest request
  *  @param localURL NSURL localURL
  */
-- (void)downloadItemWithRequest:(NSURLRequest *)request localURL:(NSURL *)localURL;
+- (void)downloadItemWithRequest:(NSURLRequest *)request localURL:(NSURL *)localURL completion:(TBContentDownloaderCompletionBlock)completion;
 
 @end
 

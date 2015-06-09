@@ -318,6 +318,7 @@
                         <binding destination="tRc-FO-wDZ" name="sortDescriptors" keyPath="self.sortDescriptors" id="MfK-nU-PSy"/>
                     </connections>
                 </arrayController>
+                <customObject id="lpe-Ka-gjJ" customClass="NSSortDescriptor"/>
             </objects>
             <point key="canvasLocation" x="75" y="661"/>
         </scene>

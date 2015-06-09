@@ -21,6 +21,7 @@
                                                return [ZMLDataTransformer integerNumberFromValue:value];
                                            }];
                                            [mapping mapKeyPath:@"color" toProperty:@"color"];
+                                           [mapping mapKeyPath:@"email" toProperty:@"email"];
                                            [mapping mapKeyPath:@"build_number" toProperty:@"buildNumber"];
                                        }];
     [mapping mapPropertiesFromMappingObject:[super objectMapping]];

@@ -15,5 +15,6 @@
 @dynamic name;
 @dynamic buildNumber;
 @dynamic color;
+@dynamic email;
 
 @end

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A72FE5851B1EDCCA0079011D /* TBBuildsLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A72FE5841B1EDCCA0079011D /* TBBuildsLoaderTests.m */; };
+		A73775B51B256F6100E94AEF /* TBContentDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A73775B41B256F6100E94AEF /* TBContentDownloader.m */; };
+		A73776071B25F9A500E94AEF /* TBLocalFilesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A73776061B25F9A500E94AEF /* TBLocalFilesManager.m */; };
+		A737760B1B2709DC00E94AEF /* TBGravatarLinksBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A737760A1B2709DC00E94AEF /* TBGravatarLinksBuilder.m */; };
+		A737760D1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A737760C1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m */; };
 		A76423781B1CD122009175E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76423771B1CD122009175E5 /* main.m */; };
 		A76423801B1CD122009175E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A764237F1B1CD122009175E5 /* Images.xcassets */; };
 		A76423831B1CD122009175E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76423811B1CD122009175E5 /* Main.storyboard */; };
@@ -52,6 +56,13 @@
 		7789F9710D6A77B54968FA66 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		86155CA1C2DD6E92BC6B8E72 /* libPods-TravisBoardTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravisBoardTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72FE5841B1EDCCA0079011D /* TBBuildsLoaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBuildsLoaderTests.m; sourceTree = "<group>"; };
+		A73775B31B256F6100E94AEF /* TBContentDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBContentDownloader.h; sourceTree = "<group>"; };
+		A73775B41B256F6100E94AEF /* TBContentDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBContentDownloader.m; sourceTree = "<group>"; };
+		A73776051B25F9A500E94AEF /* TBLocalFilesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLocalFilesManager.h; sourceTree = "<group>"; };
+		A73776061B25F9A500E94AEF /* TBLocalFilesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLocalFilesManager.m; sourceTree = "<group>"; };
+		A73776091B2709DC00E94AEF /* TBGravatarLinksBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBGravatarLinksBuilder.h; sourceTree = "<group>"; };
+		A737760A1B2709DC00E94AEF /* TBGravatarLinksBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBGravatarLinksBuilder.m; sourceTree = "<group>"; };
+		A737760C1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBGravatarLinksBuilderTests.m; sourceTree = "<group>"; };
 		A764236F1B1CD122009175E5 /* TravisBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravisBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76423731B1CD122009175E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A76423771B1CD122009175E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -143,6 +154,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A73776041B25F98800E94AEF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A73776051B25F9A500E94AEF /* TBLocalFilesManager.h */,
+				A73776061B25F9A500E94AEF /* TBLocalFilesManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A73776081B2709D000E94AEF /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				A73776091B2709DC00E94AEF /* TBGravatarLinksBuilder.h */,
+				A737760A1B2709DC00E94AEF /* TBGravatarLinksBuilder.m */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
 		A76423661B1CD122009175E5 = {
 			isa = PBXGroup;
 			children = (
@@ -168,9 +197,11 @@
 			children = (
 				A7F9B3701B1DB08D00B55DD0 /* Definitions */,
 				A76423981B1CD2AB009175E5 /* AppDelegate */,
+				A73776081B2709D000E94AEF /* Builders */,
 				A7A7E13C1B1DE0A000CD0029 /* Loaders */,
 				A7F9B3691B1DAB6300B55DD0 /* Transformers */,
 				A7F9B3721B1DBA9800B55DD0 /* Models */,
+				A73776041B25F98800E94AEF /* Managers */,
 				A76423A01B1CD3C5009175E5 /* Views */,
 				A764239C1B1CD2B1009175E5 /* ViewControllers */,
 				A76423721B1CD122009175E5 /* Supporting Files */,
@@ -195,6 +226,7 @@
 				A7FF83911B1ED98000F3B73B /* TBBaseTestCase.h */,
 				A7FF83921B1ED98000F3B73B /* TBBaseTestCase.m */,
 				A72FE5841B1EDCCA0079011D /* TBBuildsLoaderTests.m */,
+				A737760C1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m */,
 				A764238C1B1CD123009175E5 /* Supporting Files */,
 			);
 			path = TravisBoardTests;
@@ -244,6 +276,8 @@
 				A7A7E1471B1DF99500CD0029 /* RequestManager */,
 				A7A7E13D1B1DE0AE00CD0029 /* TBBuildsLoader.h */,
 				A7A7E13E1B1DE0AE00CD0029 /* TBBuildsLoader.m */,
+				A73775B31B256F6100E94AEF /* TBContentDownloader.h */,
+				A73775B41B256F6100E94AEF /* TBContentDownloader.m */,
 			);
 			path = Loaders;
 			sourceTree = "<group>";
@@ -562,11 +596,14 @@
 				A76423781B1CD122009175E5 /* main.m in Sources */,
 				A7F9B36F1B1DAD6D00B55DD0 /* TBBackgroundColorView.m in Sources */,
 				A7A7E1711B1DFE8600CD0029 /* ZMLAPIResponseHandler.m in Sources */,
+				A737760B1B2709DC00E94AEF /* TBGravatarLinksBuilder.m in Sources */,
 				A7A7E1431B1DE73700CD0029 /* TBBuild+Additions.m in Sources */,
 				A76423A31B1CDAF6009175E5 /* TBBuildsListRowView.m in Sources */,
 				A7A7E1571B1DF99500CD0029 /* ZMLRequestAttachment+Additions.m in Sources */,
 				A7A7E1581B1DF99500CD0029 /* ZMLRequestAttachment.m in Sources */,
+				A73776071B25F9A500E94AEF /* TBLocalFilesManager.m in Sources */,
 				A7A7E1691B1DFBA100CD0029 /* ZMLBaseRequestSerializer.m in Sources */,
+				A73775B51B256F6100E94AEF /* TBContentDownloader.m in Sources */,
 				A7F9B3761B1DBB1F00B55DD0 /* TBBuild.m in Sources */,
 				A7A7E13F1B1DE0AE00CD0029 /* TBBuildsLoader.m in Sources */,
 				A7A7E1601B1DF9BA00CD0029 /* ZMLAPIConfiguration.m in Sources */,
@@ -588,6 +625,7 @@
 				A7FF83981B1ED99900F3B73B /* ZMLTestableRequestManager.m in Sources */,
 				A7FF83971B1ED99900F3B73B /* TBRequestManagerTests.m in Sources */,
 				A72FE5851B1EDCCA0079011D /* TBBuildsLoaderTests.m in Sources */,
+				A737760D1B270CBE00E94AEF /* TBGravatarLinksBuilderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

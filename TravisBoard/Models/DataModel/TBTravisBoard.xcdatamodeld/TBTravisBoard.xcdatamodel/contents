@@ -3,10 +3,12 @@
     <entity name="TBBuild" representedClassName="TBBuild" syncable="YES">
         <attribute name="buildNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commiterName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remoteId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="TBBuild" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="TBBuild" positionX="-54" positionY="-9" width="128" height="135"/>
     </elements>
 </model>

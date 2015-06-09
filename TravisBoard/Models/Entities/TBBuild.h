@@ -14,6 +14,7 @@
 
 @property (nonatomic, retain) NSNumber * remoteId;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSNumber * buildNumber;
 @property (nonatomic, retain) NSString * color;
 

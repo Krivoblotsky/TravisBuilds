@@ -10,8 +10,10 @@
 #import "TBBuildsListRowView.h"
 #import <HardCoreData/HCDCoreDataStackController.h>
 #import "TBBuildsLoader.h"
+#import "TBBuild.h"
+#import "TBGravatarLinksBuilder.h"
 
-@interface TBBuildsListViewController () <NSTableViewDataSource, NSTableViewDelegate>
+@interface TBBuildsListViewController () <NSTableViewDelegate>
 
 /* UI */
 @property (nonatomic, weak) IBOutlet NSTableView *tableView;
@@ -26,7 +28,16 @@
 
 @implementation TBBuildsListViewController
 
-#pragma mark - Accessors
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"buildNumber" ascending:NO]];
+    }
+    return self;
+}
+
+#pragma mark - Lazy Accessors
 
 - (HCDCoreDataStackController *)coreDataController
 {
@@ -45,21 +56,24 @@
     return _buildsLoader;
 }
 
-- (NSArray *)sortDescriptors
-{
-    if (!_sortDescriptors) {
-        _sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"buildNumber" ascending:NO]];
-    }
-    return _sortDescriptors;
-}
-
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self _loadBuilds];
+}
+
+#pragma mark - NSTableViewDelegate
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    TBBuildsListRowView *rowView = [tableView makeViewWithIdentifier:[tableColumn identifier] owner:[tableView delegate]];
+    TBBuild *build = [self.buildsArrayController arrangedObjects][row];
+    
+    NSLog(@"%@", [TBGravatarLinksBuilder gravatarUserImageURLWithEmail:build.email]);
+    
+    return rowView;
 }
 
 #pragma mark - Private

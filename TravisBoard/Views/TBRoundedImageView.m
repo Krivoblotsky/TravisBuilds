@@ -8,23 +8,16 @@
 
 #import "TBRoundedImageView.h"
 
-@interface TBRoundedImageView ()
-
-@property (nonatomic, strong) NSImage *test;
-
-@end
-
 @implementation TBRoundedImageView
 
 - (void)setImage:(NSImage *)image
 {
-    [super setImage: nil];
-    
-    self.test = image;
-    [self setNeedsDisplay];
+    _image = image;
+    [self setNeedsDisplay:YES];
 }
 
-- (void)drawRect:(NSRect)dirtyRect {
+- (void)drawRect:(NSRect)dirtyRect
+{
     [super drawRect:dirtyRect];
     
     [NSGraphicsContext saveGraphicsState];
@@ -33,11 +26,7 @@
                                                          xRadius:self.bounds.size.width / 2.0f
                                                          yRadius:self.bounds.size.height / 2.0f];
     [path addClip];
-    
-    [self.test drawInRect:dirtyRect
-             fromRect:NSZeroRect
-            operation:NSCompositeSourceOver
-             fraction:1.0];
+    [self.image drawInRect:dirtyRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
     
     [NSGraphicsContext restoreGraphicsState];
 }

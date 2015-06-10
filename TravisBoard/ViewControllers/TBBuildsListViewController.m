@@ -80,10 +80,6 @@
     NSURL *gravatarURL = [TBGravatarLinksBuilder gravatarUserImageURLWithEmail:build.email];
     [self.artworksProvider provideArtworkForURL:gravatarURL withCompletion:^(NSImage *artwork, NSError *error) {
         rowView.contributorImageView.image = artwork;
-        
-//        [rowView setWantsLayer:YES];
-//        rowView.contributorImageView.layer.cornerRadius = 24.0f;
-//        rowView.contributorImageView.layer.masksToBounds = YES;
     }];
     
     return rowView;

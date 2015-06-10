@@ -18,12 +18,13 @@
 {
     [super awakeFromNib];
     
+    self.backgroundStyle = NSBackgroundStyleLight;
+    
     /* Bind background color */
     [self.backgroundColorView bind:@"backgroundColor"
                           toObject:self
                        withKeyPath:@"objectValue.color"
                            options:@{NSValueTransformerBindingOption:[TBHexToColorTransformer new]}];
 }
-
 
 @end

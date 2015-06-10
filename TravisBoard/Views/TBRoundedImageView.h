@@ -8,6 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface TBRoundedImageView : NSImageView
+@interface TBRoundedImageView : NSView
+
+/* Represents the image to show */
+@property (nonatomic, strong) NSImage *image;
 
 @end

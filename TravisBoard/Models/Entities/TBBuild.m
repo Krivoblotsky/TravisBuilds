@@ -16,5 +16,7 @@
 @dynamic buildNumber;
 @dynamic color;
 @dynamic email;
+@dynamic commitMessage;
+@dynamic buildUrl;
 
 @end

@@ -16,6 +16,8 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSNumber * buildNumber;
+@property (nonatomic, retain) NSString * commitMessage;
 @property (nonatomic, retain) NSString * color;
+@property (nonatomic, retain) NSString * buildUrl;
 
 @end

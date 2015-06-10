@@ -19,7 +19,7 @@
     [super awakeFromNib];
     
     self.backgroundStyle = NSBackgroundStyleLight;
-    
+
     /* Bind background color */
     [self.backgroundColorView bind:@"backgroundColor"
                           toObject:self

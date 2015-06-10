@@ -68,6 +68,13 @@
     [self _downloadBuilds];
 }
 
+#pragma mark - Actions
+
+- (IBAction)reloadButtonClicked:(id)sender
+{
+    [self _downloadBuilds];
+}
+
 #pragma mark - NSTableViewDelegate
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
@@ -90,9 +97,12 @@
     NSInteger selectedRow = [self.tableView selectedRow];
     if (selectedRow != -1) {
         
-        NSURL *externalURL = [NSURL URLWithString:@"http://google.com"];
+        /* Show build in default browser */
+        TBBuild *build = self.buildsArrayController.arrangedObjects[selectedRow];
+        NSURL *externalURL = [NSURL URLWithString:build.buildUrl];
         [[NSWorkspace sharedWorkspace] openURL:externalURL];
         
+        /* Deselect the row */
         [self.tableView deselectRow:[self.tableView selectedRow]];
     }
 }

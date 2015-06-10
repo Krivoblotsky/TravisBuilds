@@ -2,13 +2,15 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="TBBuild" representedClassName="TBBuild" syncable="YES">
         <attribute name="buildNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="buildUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="commiterName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commitMessage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remoteId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="TBBuild" positionX="-54" positionY="-9" width="128" height="135"/>
+        <element name="TBBuild" positionX="-54" positionY="-9" width="128" height="165"/>
     </elements>
 </model>

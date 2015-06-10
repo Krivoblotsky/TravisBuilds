@@ -22,6 +22,8 @@
                                            }];
                                            [mapping mapKeyPath:@"color" toProperty:@"color"];
                                            [mapping mapKeyPath:@"email" toProperty:@"email"];
+                                           [mapping mapKeyPath:@"commit_message" toProperty:@"commitMessage"];
+                                           [mapping mapKeyPath:@"build_url" toProperty:@"buildUrl"];
                                            [mapping mapKeyPath:@"build_number" toProperty:@"buildNumber"];
                                        }];
     [mapping mapPropertiesFromMappingObject:[super objectMapping]];

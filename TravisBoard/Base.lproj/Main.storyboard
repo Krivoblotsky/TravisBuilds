@@ -51,61 +51,10 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="bib-Uj-vzu">
                                     <items>
-                                        <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
-                                            <connections>
-                                                <action selector="newDocument:" target="Ady-hI-5gd" id="4Si-XN-c54"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
-                                            <connections>
-                                                <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Open Recent" id="tXI-mr-wws">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="oas-Oc-fiZ">
-                                                <items>
-                                                    <menuItem title="Clear Menu" id="vNY-rz-j42">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="clearRecentDocuments:" target="Ady-hI-5gd" id="Daa-9d-B3U"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
+                                        <menuItem title="Reload" keyEquivalent="r" id="cQQ-FZ-XCO"/>
                                         <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                             <connections>
                                                 <action selector="performClose:" target="Ady-hI-5gd" id="HmO-Ls-i7Q"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Save…" keyEquivalent="s" id="pxx-59-PXV">
-                                            <connections>
-                                                <action selector="saveDocument:" target="Ady-hI-5gd" id="teZ-XB-qJY"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Save As…" keyEquivalent="S" id="Bw7-FT-i3A">
-                                            <connections>
-                                                <action selector="saveDocumentAs:" target="Ady-hI-5gd" id="mDf-zr-I0C"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Revert to Saved" id="KaW-ft-85H">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="revertDocumentToSaved:" target="Ady-hI-5gd" id="iJ3-Pv-kwq"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="aJh-i4-bef"/>
-                                        <menuItem title="Page Setup…" keyEquivalent="P" id="qIS-W8-SiK">
-                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="runPageLayout:" target="Ady-hI-5gd" id="Din-rz-gC5"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Print…" keyEquivalent="p" id="aTl-1u-JFS">
-                                            <connections>
-                                                <action selector="print:" target="Ady-hI-5gd" id="qaZ-4w-aoO"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -147,7 +96,7 @@
                         <value key="maxSize" type="size" width="600" height="900"/>
                     </window>
                     <connections>
-                        <segue destination="tRc-FO-wDZ" kind="relationship" relationship="window.shadowedContentViewController" id="SSA-hH-DfW"/>
+                        <segue destination="tRc-FO-wDZ" kind="relationship" relationship="window.shadowedContentViewController" id="WzP-Py-sd6"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -162,8 +111,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="98" horizontalPageScroll="10" verticalLineScroll="98" verticalPageScroll="10" allowsMagnification="YES" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="allowed" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-b5-NAw">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="DJ9-J7-ofL" userLabel="BottomControlsView">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="35"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3sC-e5-PGI">
+                                        <rect key="frame" x="8" y="4" width="71" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="EyX-q2-tgL"/>
+                                            <constraint firstAttribute="width" constant="71" id="khr-CV-CUj"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="roundTextured" title="Reload" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EFA-1n-Kyu">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="reloadButtonClicked:" target="tRc-FO-wDZ" id="S0q-dA-W64"/>
+                                        </connections>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aIX-y5-F1H">
+                                        <rect key="frame" x="329" y="0.0" width="116" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="112" id="WsF-R3-hwH"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="v. 0.0.1 build 234" id="lWc-pb-wZu">
+                                            <font key="font" size="10" name="HelveticaNeue-Light"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aIX-y5-F1H" secondAttribute="bottom" id="ANZ-t2-KYM"/>
+                                    <constraint firstItem="3sC-e5-PGI" firstAttribute="leading" secondItem="DJ9-J7-ofL" secondAttribute="leading" constant="8" id="B19-EC-FQk"/>
+                                    <constraint firstItem="3sC-e5-PGI" firstAttribute="top" secondItem="DJ9-J7-ofL" secondAttribute="top" constant="7" id="Zkf-bs-vaq"/>
+                                    <constraint firstItem="aIX-y5-F1H" firstAttribute="top" secondItem="DJ9-J7-ofL" secondAttribute="top" constant="10" id="bnP-J8-rWw"/>
+                                    <constraint firstAttribute="trailing" secondItem="aIX-y5-F1H" secondAttribute="trailing" constant="7" id="e1T-gN-QGN"/>
+                                </constraints>
+                            </customView>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="98" horizontalPageScroll="10" verticalLineScroll="98" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="allowed" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-b5-NAw">
+                                <rect key="frame" x="0.0" y="35" width="450" height="265"/>
                                 <clipView key="contentView" id="eYM-gP-CS2">
                                     <rect key="frame" x="1" y="17" width="238" height="117"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,10 +158,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="448" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
-                                            <color key="backgroundColor" red="0.93725490196078431" green="0.94117647058823528" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="445" minWidth="40" maxWidth="1000" id="ylW-Tc-aUl">
+                                                <tableColumn width="445.18631323491013" minWidth="40" maxWidth="1000" id="ylW-Tc-aUl">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="The title">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -242,6 +228,9 @@
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="tQl-8c-b92" name="value" keyPath="objectValue.commitMessage" id="DJU-SP-jgP"/>
+                                                                    </connections>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qDN-Zh-HJc">
                                                                     <rect key="frame" x="82" y="13" width="302" height="26"/>
@@ -291,7 +280,7 @@
                                             </connections>
                                         </tableView>
                                     </subviews>
-                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.1764705882" green="0.80000000000000004" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="8Ut-Ku-nDf">
                                     <rect key="frame" x="1" y="118.99921178817749" width="238" height="15"/>
@@ -305,7 +294,11 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TWQ-b5-NAw" secondAttribute="trailing" id="833-1h-XI0"/>
-                            <constraint firstAttribute="bottom" secondItem="TWQ-b5-NAw" secondAttribute="bottom" id="Rzs-43-ggb"/>
+                            <constraint firstItem="DJ9-J7-ofL" firstAttribute="leading" secondItem="aZg-4g-1g5" secondAttribute="leading" id="8sV-KK-AbX"/>
+                            <constraint firstAttribute="bottom" secondItem="DJ9-J7-ofL" secondAttribute="bottom" id="Ijy-Me-6Ei"/>
+                            <constraint firstAttribute="bottom" secondItem="TWQ-b5-NAw" secondAttribute="bottom" constant="35" id="Rzs-43-ggb"/>
+                            <constraint firstItem="DJ9-J7-ofL" firstAttribute="top" secondItem="TWQ-b5-NAw" secondAttribute="bottom" id="eZa-rz-TWn"/>
+                            <constraint firstAttribute="trailing" secondItem="DJ9-J7-ofL" secondAttribute="trailing" id="myz-bw-KQb"/>
                             <constraint firstItem="TWQ-b5-NAw" firstAttribute="top" secondItem="aZg-4g-1g5" secondAttribute="top" id="p8z-lx-wR8"/>
                             <constraint firstItem="TWQ-b5-NAw" firstAttribute="leading" secondItem="aZg-4g-1g5" secondAttribute="leading" id="vhm-KR-qcw"/>
                         </constraints>
